@@ -1,0 +1,26 @@
+<h2>日幣匯率輸入</h2>
+<hr>
+
+<%= link_to("新增銀行匯率", new_admin_japanrate_path, class: "btn btn-success") %>
+<hr>
+<table class = "table">
+  <thead>
+    <tr>
+      <td>銀行</td>
+      <td>修改時間</td>
+      <td>操作</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @japanrates.each do |japanrate| %>
+      <tr>
+        <td><%= japanrate.bank %></td>
+        <td><%= japanrate.updated_at %></td>
+        <td>
+          <%= link_to("編輯", edit_admin_japanrate_path(japanrate), class: "btn btn-primary btn-sm") %>
+          <%= link_to("刪除", admin_japanrate_path(japanrate), method: :delete, class: "btn btn-danger btn-sm") %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

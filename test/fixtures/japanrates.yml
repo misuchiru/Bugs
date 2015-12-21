@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  url: MyText
+  cashrate_buy: 1.5
+  cashrate_sell: 1.5
+  sightrate_buy: 1.5
+  sightrate_sell: 1.5
+
+two:
+  url: MyText
+  cashrate_buy: 1.5
+  cashrate_sell: 1.5
+  sightrate_buy: 1.5
+  sightrate_sell: 1.5
