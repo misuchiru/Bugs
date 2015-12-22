@@ -13,17 +13,12 @@
   <tbody>
     <% @japanrates.each do |rate| %>
       <tr>
-      <% @doc = Nokogiri::HTML(open(rate.url)) %>
-      <% @price1 = @doc.at_css("#{rate.cashrate_buy}").text[/[0-9\.]+/] %>
-      <% @price2 = @doc.at_css("#{rate.cashrate_sell}").text %>
-      <% @price3 = @doc.at_css("#{rate.sightrate_buy}").text %>
-      <% @price4 = @doc.at_css("#{rate.sightrate_sell}").text %>
       
         <td><%= rate.bank %></td>
-        <td><%= @price1 %></td>
-        <td><%= @price2 %></td>
-        <td><%= @price3 %></td>
-        <td><%= @price4 %></td>
+        <td><%= rate.price1 %></td>
+        <td><%= rate.price2 %></td>
+        <td><%= rate.price3 %></td>
+        <td><%= rate.price4 %></td>
       </tr>
     <% end %>
     
