@@ -4,6 +4,5 @@ class JapanratesController < ApplicationController
 	require 'open-uri'
 	def index
 		@japanrates = Japanrate.all
-		
 	end
 end
