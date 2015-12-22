@@ -1,7 +1,9 @@
-<table>
+<h2>日幣匯率</h2>
+<hr>
+<table class="table">
   <thead>
     <tr>
-      <td>國籍</td> 
+      <td>銀行</td> 
       <td>現金買入</td>
       <td>現金賣出</td>
       <td>即期買入</td>
@@ -9,22 +11,21 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><%= @title %></td>
-      <td><%= @price1 %></td>
-      <td><%= @price2 %></td>
-      <td><%= @price3 %></td>
-      <td><%= @price4 %></td>
-    </tr>
-    <tr>
-      <td><%= @title %></td>
-      <td><%= @cprice1 %></td>
-      <td><%= @cprice2 %></td>
-      <td><%= @cprice3 %></td>
-      <td><%= @cprice4 %></td>
-    </tr>
+    <% @japanrates.each do |rate| %>
+      <tr>
+      <% @doc = Nokogiri::HTML(open(rate.url)) %>
+      <% @price1 = @doc.at_css("#{rate.cashrate_buy}").text[/[0-9\.]+/] %>
+      <% @price2 = @doc.at_css("#{rate.cashrate_sell}").text %>
+      <% @price3 = @doc.at_css("#{rate.sightrate_buy}").text %>
+      <% @price4 = @doc.at_css("#{rate.sightrate_sell}").text %>
+      
+        <td><%= rate.bank %></td>
+        <td><%= @price1 %></td>
+        <td><%= @price2 %></td>
+        <td><%= @price3 %></td>
+        <td><%= @price4 %></td>
+      </tr>
+    <% end %>
+    
   </tbody>
-  <tr>
-    <td></td>
-  </tr>
 </table>
