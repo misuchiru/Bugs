@@ -3,24 +3,26 @@
 <table class="table">
   <thead>
     <tr>
-      <td>銀行</td> 
+      <td>銀行</td>
       <td>現金買入</td>
       <td>現金賣出</td>
       <td>即期買入</td>
       <td>即期賣出</td>
+      <td>更新時間</td>
     </tr>
   </thead>
   <tbody>
     <% @japanrates.each do |rate| %>
       <tr>
-      
+
         <td><%= rate.bank %></td>
         <td><%= rate.price1 %></td>
         <td><%= rate.price2 %></td>
         <td><%= rate.price3 %></td>
         <td><%= rate.price4 %></td>
+        <td><%= rate.updated_at %></td>
       </tr>
     <% end %>
-    
+
   </tbody>
 </table>
