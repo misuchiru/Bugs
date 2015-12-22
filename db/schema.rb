@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151221182017) do
+ActiveRecord::Schema.define(version: 20151222063911) do
 
   create_table "japanrates", force: :cascade do |t|
     t.text     "url"
@@ -22,6 +22,10 @@ ActiveRecord::Schema.define(version: 20151221182017) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.string   "bank"
+    t.float    "price1"
+    t.float    "price2"
+    t.float    "price3"
+    t.float    "price4"
   end
 
 end
