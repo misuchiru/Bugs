@@ -27,6 +27,11 @@ class Admin::JapanratesController < ApplicationController
       render :edit
     end
   end
+  def destroy
+    @japanrate = Japanrate.find(params[:id])
+    @japanrate.destroy
+    redirect_to admin_japanrates_path
+  end
 
   private
   def japanrate_params
