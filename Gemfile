@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "bootstrap-sass"
 gem "simple_form"
 gem "devise"
+gem 'google-analytics-rails'
 gem "awesome_rails_console"
 group :production do
 	gem "pg"
