@@ -3,6 +3,6 @@ class JapanratesController < ApplicationController
 	require 'nokogiri'
 	require 'open-uri'
 	def index
-		@japanrates = Japanrate.all
+		@japanrates = Japanrate.all.rate
 	end
 end
