@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   namespace :admin do
     root 'japanrates#index'
     resources :japanrates
+    resources :japan_weathers
   end
 end

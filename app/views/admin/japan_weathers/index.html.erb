@@ -1,0 +1,26 @@
+<h2>日本天氣</h2>
+<hr>
+
+<%= link_to("新增地區天氣", new_admin_japan_weather_path, class: "btn btn-success") %>
+<hr>
+<table class = "table">
+  <thead>
+    <tr>
+      <td>地區</td>
+      <td>修改時間</td>
+      <td>操作</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @weathers.each do |weather| %>
+      <tr>
+        <td><%= weather.city_name %></td>
+        <td><%= weather.updated_at %></td>
+        <td>
+          <%= link_to("編輯", edit_admin_japan_weather_path(weather), class: "btn btn-primary btn-sm") %>
+          <%= link_to("刪除", admin_japan_weather_path(weather), method: :delete, class: "btn btn-danger btn-sm") %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
