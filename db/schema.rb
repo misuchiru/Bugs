@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160112101551) do
+ActiveRecord::Schema.define(version: 20160113044000) do
 
   create_table "japan_weathers", force: :cascade do |t|
     t.text     "url"
@@ -39,6 +39,13 @@ ActiveRecord::Schema.define(version: 20160112101551) do
     t.text     "day5"
     t.text     "day6"
     t.text     "day7"
+    t.string   "day1_p"
+    t.string   "day2_p"
+    t.string   "day3_p"
+    t.string   "day4_p"
+    t.string   "day5_p"
+    t.string   "day6_p"
+    t.string   "day7_p"
   end
 
   create_table "japanrates", force: :cascade do |t|
