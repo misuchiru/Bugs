@@ -11,7 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151222080055) do
+ActiveRecord::Schema.define(version: 20160112101551) do
+
+  create_table "japan_weathers", force: :cascade do |t|
+    t.text     "url"
+    t.text     "city_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text     "day1_h"
+    t.text     "day1_l"
+    t.text     "day2_h"
+    t.text     "day2_l"
+    t.text     "day3_h"
+    t.text     "day3_l"
+    t.text     "day4_h"
+    t.text     "day4_l"
+    t.text     "day5_h"
+    t.text     "day5_l"
+    t.text     "day6_h"
+    t.text     "day6_l"
+    t.text     "day7_h"
+    t.text     "day7_l"
+    t.text     "day1"
+    t.text     "day2"
+    t.text     "day3"
+    t.text     "day4"
+    t.text     "day5"
+    t.text     "day6"
+    t.text     "day7"
+  end
 
   create_table "japanrates", force: :cascade do |t|
     t.text     "url"
