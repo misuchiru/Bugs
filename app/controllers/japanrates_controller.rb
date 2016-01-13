@@ -1,5 +1,5 @@
 class JapanratesController < ApplicationController
 	def index
-		@japanrates = Japanrate.all.rate
+		@japanrates = Japanrate.all
 	end
 end

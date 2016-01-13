@@ -1,44 +1,58 @@
 <h2>日本天氣</h2>
 <hr>
 <% @weathers.each do |weather| %>
-  <table class="table">
-    <thead>
-      <tr>
-        <th colspan="8"><%= weather.city_name %>週間天氣</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>日期</th>
-        <th><%= weather.day1 %></th>
-        <th><%= weather.day2 %></th>
-        <th><%= weather.day3 %></th>
-        <th><%= weather.day4 %></th>
-        <th><%= weather.day5 %></th>
-        <th><%= weather.day6 %></th>
-        <th><%= weather.day7 %></th>
-      </tr>
-      <tr class="danger">
-        <th>最高氣溫</th>
-        <td><%= weather.day1_h %>℃</td>
-        <td><%= weather.day2_h %>℃</td>
-        <td><%= weather.day3_h %>℃</td>
-        <td><%= weather.day4_h %>℃</td>
-        <td><%= weather.day5_h %>℃</td>
-        <td><%= weather.day6_h %>℃</td>
-        <td><%= weather.day7_h %>℃</td>
-      </tr>
-      <tr class="info">
-        <th>最低氣溫</th>
-        <td><%= weather.day1_l %>℃</td>
-        <td><%= weather.day2_l %>℃</td>
-        <td><%= weather.day3_l %>℃</td>
-        <td><%= weather.day4_l %>℃</td>
-        <td><%= weather.day5_l %>℃</td>
-        <td><%= weather.day6_l %>℃</td>
-        <td><%= weather.day7_l %>℃</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th colspan="8"><%= weather.city_name %>週間天氣</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>日期</th>
+            <th><%= weather.day1 %></th>
+            <th><%= weather.day2 %></th>
+            <th><%= weather.day3 %></th>
+            <th><%= weather.day4 %></th>
+            <th><%= weather.day5 %></th>
+            <th><%= weather.day6 %></th>
+            <th><%= weather.day7 %></th>
+          </tr>
+          <tr>
+            <th>天氣</th>
+            <td><img class="img-responsive" src=<%= weather.day2_p %>></td>
+            <td><img class="img-responsive" src=<%= weather.day2_p %>></td>
+            <td><img class="img-responsive" src=<%= weather.day3_p %>></td>
+            <td><img class="img-responsive" src=<%= weather.day4_p %>></td>
+            <td><img class="img-responsive" src=<%= weather.day5_p %>></td>
+            <td><img class="img-responsive" src=<%= weather.day6_p %>></td>
+            <td><img class="img-responsive" src=<%= weather.day7_p %>></td>
+          </tr>
+          <tr class="danger">
+            <th>最高氣溫</th>
+            <td><%= weather.day1_h %>℃</td>
+            <td><%= weather.day2_h %>℃</td>
+            <td><%= weather.day3_h %>℃</td>
+            <td><%= weather.day4_h %>℃</td>
+            <td><%= weather.day5_h %>℃</td>
+            <td><%= weather.day6_h %>℃</td>
+            <td><%= weather.day7_h %>℃</td>
+          </tr>
+          <tr class="info">
+            <th>最低氣溫</th>
+            <td><%= weather.day1_l %>℃</td>
+            <td><%= weather.day2_l %>℃</td>
+            <td><%= weather.day3_l %>℃</td>
+            <td><%= weather.day4_l %>℃</td>
+            <td><%= weather.day5_l %>℃</td>
+            <td><%= weather.day6_l %>℃</td>
+            <td><%= weather.day7_l %>℃</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 <% end %>
   
