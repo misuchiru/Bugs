@@ -1,0 +1,2 @@
+module JapanWeathersHelper
+end
