@@ -28,6 +28,7 @@ gem "simple_form"
 gem "devise"
 gem 'google-analytics-rails'
 gem "awesome_rails_console"
+gem "seo_helper"
 group :production do
 	gem "pg"
 	gem "rails_12factor"
