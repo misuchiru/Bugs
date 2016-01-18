@@ -2,22 +2,22 @@
 <hr>
 <%= simple_form_for [:admin, @japanrate] do |f| %>
   <div class="form-group">
-    <%= f.input :bank %>
+    <%= f.input :bank, input_html: { class: 'form-control' } %>
   </div>
   <div class="form-group">
-    <%= f.input :url %>
+    <%= f.input :url , input_html: { class: 'form-control' }%>
   </div>
   <div class="form-group">
-    <%= f.input :cashrate_buy %>
+    <%= f.input :cashrate_buy, input_html: { class: 'form-control' } %>
   </div>
   <div class="form-group">
-    <%= f.input :cashrate_sell %>
+    <%= f.input :cashrate_sell, input_html: { class: 'form-control' } %>
   </div>
   <div class="form-group">
-    <%= f.input :sightrate_buy %>
+    <%= f.input :sightrate_buy, input_html: { class: 'form-control' } %>
   </div>
   <div class="form-group">
-    <%= f.input :sightrate_sell %>
+    <%= f.input :sightrate_sell, input_html: { class: 'form-control' } %>
   </div>
 
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
