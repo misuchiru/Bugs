@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160114094510) do
+ActiveRecord::Schema.define(version: 20160119041224) do
 
   create_table "japan_weathers", force: :cascade do |t|
     t.text     "url"
@@ -69,6 +69,24 @@ ActiveRecord::Schema.define(version: 20160114094510) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
+  end
+
+  create_table "trip_events", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "trip_id"
+    t.integer  "user_id"
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trips", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "start_day"
+    t.datetime "end_day"
   end
 
   create_table "users", force: :cascade do |t|

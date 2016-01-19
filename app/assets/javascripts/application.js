@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require tinymce
+//= require moment
+//= require bootstrap-datetimepicker
+//= require fullcalendar
 //= require bootstrap-sprockets
 //= require bootstrap/dropdown
 //= require bootstrap/alert

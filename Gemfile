@@ -30,6 +30,9 @@ gem 'google-analytics-rails'
 gem "awesome_rails_console"
 gem "seo_helper"
 gem 'tinymce-rails', git: 'https://github.com/ChouAndy/tinymce-rails.git'
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+gem 'bootstrap3-datetimepicker-rails'
 group :production do
 	gem "pg"
 	gem "rails_12factor"
