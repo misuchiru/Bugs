@@ -7,6 +7,7 @@
   <thead>
     <tr>
       <td>標題</td>
+      <td>旅遊時間</td>
       <td>作者</td>
       <td>修改時間</td>
       <td>編輯行程</td>
@@ -17,8 +18,9 @@
     <% @trips.each do |trip| %>
       <tr>
         <td><%= trip.title %></td>
+        <td><%= trip.start_day.to_formatted_s(:long) %> ~ <%= trip.end_day.to_formatted_s(:long) %></td>
         <td><%= trip.author.account %></td>
-        <td><%= trip.updated_at %></td>
+        <td><%= trip.updated_at.to_formatted_s(:long) %></td>
         <td><%= link_to "行程", admin_trip_path(trip), class: "btn btn-warning btn-sm" %></td>
         <td>
           <%= link_to("編輯", edit_admin_trip_path(trip), class: "btn btn-primary btn-sm") %>

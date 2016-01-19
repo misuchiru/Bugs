@@ -15,17 +15,9 @@
 //= require turbolinks
 //= require tinymce
 //= require moment
+//= require bootstrap-datetimepicker
 //= require fullcalendar
 //= require bootstrap-sprockets
 //= require bootstrap/dropdown
 //= require bootstrap/alert
 //= require_tree .
-$(document).ready(function() {
-
-    // page is now ready, initialize the calendar...
-
-    $('#calendar').fullCalendar({
-        // put your options and callbacks here
-    })
-
-});

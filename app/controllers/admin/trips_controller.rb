@@ -15,6 +15,18 @@ class Admin::TripsController < ApplicationController
 			render :new
 		end
 	end
+	def edit
+		@trip = Trip.find(params[:id])
+	end
+	def update
+		@trip = Trip.find(params[:id])
+		@trip.author = current_user
+		if @trip.update(trip_params)
+			redirect_to admin_trips_path
+		else
+			render :edit
+		end
+	end
 	def show
 		@trip = Trip.find(params[:id])
 		@trip_events = @trip.trip_events
@@ -22,6 +34,6 @@ class Admin::TripsController < ApplicationController
 
 	private
 	def trip_params
-		params.require(:trip).permit(:title)
+		params.require(:trip).permit(:title, :start_day, :end_day)
 	end
 end

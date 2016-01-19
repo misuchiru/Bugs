@@ -3,6 +3,21 @@
 
 <%= link_to("新增行程", new_admin_trip_trip_event_path(@trip), class: "btn btn-success") %>
 <hr>
+<div id='calendar'>
+
+   <script type="text/javascript">
+  $(function() {
+   
+    // page is now ready, initialize the calendar...
+
+    $('#calendar').fullCalendar({
+      var m = @trip.id;
+        
+     });
+    });
+
+  </script>
+</div>
 <table class = "table">
   <thead>
     <tr>
