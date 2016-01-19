@@ -1,0 +1,32 @@
+<h2>旅遊行程</h2>
+<hr>
+
+<%= link_to("新增旅遊", new_admin_trip_path, class: "btn btn-success") %>
+<hr>
+<table class = "table">
+  <thead>
+    <tr>
+      <td>標題</td>
+      <td>旅遊時間</td>
+      <td>作者</td>
+      <td>修改時間</td>
+      <td>編輯行程</td>
+      <td>操作</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @trips.each do |trip| %>
+      <tr>
+        <td><%= trip.title %></td>
+        <td><%= trip.start_day.to_formatted_s(:long) %> ~ <%= trip.end_day.to_formatted_s(:long) %></td>
+        <td><%= trip.author.account %></td>
+        <td><%= trip.updated_at.to_formatted_s(:long) %></td>
+        <td><%= link_to "行程", admin_trip_path(trip), class: "btn btn-warning btn-sm" %></td>
+        <td>
+          <%= link_to("編輯", edit_admin_trip_path(trip), class: "btn btn-primary btn-sm") %>
+          <%= link_to("刪除", admin_trip_path(trip), method: :delete, class: "btn btn-danger btn-sm") %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

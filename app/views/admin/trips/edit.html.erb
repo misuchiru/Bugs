@@ -1,0 +1,27 @@
+<h2>編輯旅遊</h2>
+<hr>
+<%= simple_form_for [:admin, @trip] do |f| %>
+  <div class="form-group">
+    <%= f.input :title, input_html: { class: 'form-control' } %>
+  </div>
+   
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.input :start_day, as: :string, input_html: { class: "datepicker form-control" } %>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :end_day, as: :string, input_html: { class: "datepicker form-control" } %>
+        </div>
+        <script type="text/javascript">
+          $(function () {
+              $('.datepicker').datetimepicker({
+                inline: true,
+                sideBySide: true,
+                format: 'YYYY/MM/DD, h:mm'
+              })
+          });
+        </script>
+      </div>
+  
+  <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+<% end %>
