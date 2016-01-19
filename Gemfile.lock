@@ -79,6 +79,9 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.6.0)
+    fullcalendar-rails (2.3.1.0)
+      jquery-rails (>= 3.1.1, < 5.0.0)
+      momentjs-rails (~> 2.8, >= 2.8.4)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     google-analytics-rails (0.0.6)
@@ -103,6 +106,8 @@ GEM
     mime-types (2.99)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
+    momentjs-rails (2.10.3)
+      railties (>= 3.1)
     multi_json (1.11.2)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
@@ -209,9 +214,11 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise
+  fullcalendar-rails
   google-analytics-rails
   jbuilder (~> 2.0)
   jquery-rails
+  momentjs-rails
   pg
   rails (= 4.2.5)
   rails_12factor

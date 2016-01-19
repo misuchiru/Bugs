@@ -1,0 +1,26 @@
+<h2><%= @trip.title %></h2>
+<hr>
+
+<%= link_to("新增行程", new_admin_trip_trip_event_path(@trip), class: "btn btn-success") %>
+<hr>
+<table class = "table">
+  <thead>
+    <tr>
+      <td>標題</td>
+      <td>修改時間</td>
+      <td>操作</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @trip_events.each do |event| %>
+      <tr>
+        <td><%= link_to event.title, event.url,target: "_blank" %></td>
+        <td><%= event.updated_at %></td>
+        <td>
+          <%= link_to("編輯", edit_admin_trip_trip_event_path(event.trip, event), class: "btn btn-primary btn-sm") %>
+          <%= link_to("刪除", admin_trip_trip_event_path(event.trip, event), method: :delete, class: "btn btn-danger btn-sm") %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

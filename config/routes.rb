@@ -9,5 +9,8 @@ Rails.application.routes.draw do
     resources :japanrates
     resources :japan_weathers
     resources :posts
+    resources :trips do
+      resources :trip_events
+    end
   end
 end
