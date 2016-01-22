@@ -1,0 +1,32 @@
+<script type="text/javascript">
+  
+  $(function() {
+    var t;
+
+    $.getJSON("trip_events/try.json", function(json){
+      
+      t = json;
+    
+      $('#calendar1').fullCalendar({
+        events: 'trip_events.json',
+        defaultView: 'agendaWeek',
+        eventColor: 'green',
+        defaultDate: t.defaultDate,
+        header: {
+          left: 'prev,today,next',
+          center: 'title',
+          right: 'agendaDay,agendaWeek,month'
+        },
+        views: {
+          agendaWeek: {
+              type: 'agenda',
+              duration: {days:t.days},
+              
+          }
+        },
+      });
+
+    });
+
+  });
+</script>

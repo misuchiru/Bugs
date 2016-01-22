@@ -7,5 +7,24 @@
   <div class="form-group">
     <%= f.input :url, input_html: { class: 'form-control' } %>
   </div>
+  <div class="row">
+        <script type="text/javascript">
+          $(function () {
+              $('.datepicker').datetimepicker({
+                inline: true,
+                sideBySide: true,
+                format: 'YYYY/MM/DD, HH:mm'
+              })
+          });
+        </script>
+        <div class="col-md-6">
+          <%= f.input :start_day, as: :string, input_html: { class: "datepicker form-control" } %>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :end_day, as: :string, input_html: { class: "datepicker form-control"} %>
+        </div>
+        
+      </div>
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
 <% end %>
+<%= link_to("刪除", admin_trip_trip_event_path(@event.trip, @event), method: :delete, class: "btn btn-danger btn-sm") %>

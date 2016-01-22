@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160119041224) do
+ActiveRecord::Schema.define(version: 20160122054954) do
 
   create_table "japan_weathers", force: :cascade do |t|
     t.text     "url"
@@ -78,6 +78,9 @@ ActiveRecord::Schema.define(version: 20160119041224) do
     t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "start_day"
+    t.datetime "end_day"
+    t.string   "color"
   end
 
   create_table "trips", force: :cascade do |t|
