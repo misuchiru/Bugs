@@ -213,7 +213,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_rails_console
   bootstrap-sass
-  bootstrap3-datetimepicker-rails
+  bootstrap3-datetimepicker-rails (~> 4.17.37)
   byebug
   coffee-rails (~> 4.1.0)
   devise
@@ -221,7 +221,7 @@ DEPENDENCIES
   google-analytics-rails
   jbuilder (~> 2.0)
   jquery-rails
-  momentjs-rails
+  momentjs-rails (>= 2.9.0)
   pg
   rails (= 4.2.5)
   rails_12factor
