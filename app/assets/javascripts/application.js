@@ -13,7 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require tinymce
+//= require moment
+//= require bootstrap-datetimepicker
+//= require fullcalendar
+//= require fullcalendar/lang/zh-tw
 //= require bootstrap-sprockets
 //= require bootstrap/dropdown
 //= require bootstrap/alert
 //= require_tree .
+

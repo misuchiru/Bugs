@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160113044000) do
+ActiveRecord::Schema.define(version: 20160122054954) do
 
   create_table "japan_weathers", force: :cascade do |t|
     t.text     "url"
@@ -61,6 +61,35 @@ ActiveRecord::Schema.define(version: 20160113044000) do
     t.float    "price2"
     t.float    "price3"
     t.float    "price4"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
+
+  create_table "trip_events", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "trip_id"
+    t.integer  "user_id"
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "start_day"
+    t.datetime "end_day"
+    t.string   "color"
+  end
+
+  create_table "trips", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "start_day"
+    t.datetime "end_day"
   end
 
   create_table "users", force: :cascade do |t|
