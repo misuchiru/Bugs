@@ -10,7 +10,11 @@ Rails.application.routes.draw do
     resources :japan_weathers
     resources :posts
     resources :trips do
-      resources :trip_events
+      resources :trip_events do
+        collection do
+          get :try
+        end
+      end
     end
   end
 end
