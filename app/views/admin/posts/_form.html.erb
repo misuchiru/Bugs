@@ -1,0 +1,22 @@
+<%= simple_form_for [:admin, @post] do |f| %>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group">
+				<%= f.input :title, input_html: { class: 'form-control' } %>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group">
+				<%= f.text_area :content, class: 'tinymce', rows: 28, cols: 120 %>
+				<%= tinymce %>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<%= f.button :submit, "儲存", class: "btn btn-primary" , data: { disable_with: "資料送出..." } %>
+		</div>
+	</div>
+<% end %>

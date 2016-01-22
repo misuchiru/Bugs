@@ -1,12 +1,8 @@
 <script type="text/javascript">
-  
   $(function() {
     var t;
-
-    $.getJSON("trip_events/try.json", function(json){
-      
-      t = json;
-    
+    $.getJSON("trip_events/try.json", function(json){    
+      t = json;  
       $('#calendar1').fullCalendar({
         events: 'trip_events.json',
         defaultView: 'agendaWeek',
@@ -20,13 +16,10 @@
         views: {
           agendaWeek: {
               type: 'agenda',
-              duration: {days:t.days},
-              
+              duration: {days:t.days},             
           }
         },
       });
-
     });
-
   });
 </script>

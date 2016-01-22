@@ -1,12 +1,3 @@
 <h2>新增地區天氣</h2>
 <hr>
-<%= simple_form_for [:admin, @weather] do |f| %>
-  <div class="form-group">
-    <%= f.input :city_name, input_html: { class: 'form-control' } %>
-  </div>
-  <div class="form-group">
-    <%= f.input :url, input_html: { class: 'form-control' } %>
-  </div>
-  <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
-<% end %>
-
+<%= render 'form' %>

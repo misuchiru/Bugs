@@ -31,6 +31,11 @@ class Admin::TripsController < ApplicationController
 		@trip = Trip.find(params[:id])
 		@trip_events = @trip.trip_events
 	end
+	def destroy
+		@trip = Trip.find(params[:id])
+		@trip.destroy
+		redirect_to admin_trips_path
+	end
 
 	private
 	def trip_params

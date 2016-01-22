@@ -1,0 +1,21 @@
+<%= simple_form_for [:admin, @weather] do |f| %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.input :city_name, label: '城市名稱', input_html: { class: 'form-control' } %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.input :url, label: '氣象網站連結', input_html: { class: 'form-control' } %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <%= f.button :submit, "儲存", class: "btn btn-primary" , data: { disable_with: "資料送出..." } %>
+    </div>
+  </div>
+<% end %>

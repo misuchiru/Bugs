@@ -1,0 +1,43 @@
+<%= simple_form_for [:admin, @japanrate] do |f| %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.input :bank, label: '銀行名稱', input_html: { class: 'form-control' } %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.input :url, label: '銀行網站連結', input_html: { class: 'form-control' } %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.input :cashrate_buy, label: '銀行現金買入', input_html: { class: 'form-control' } %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.input :cashrate_sell, label: '銀行現金賣出', input_html: { class: 'form-control' } %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.input :sightrate_buy, label: '銀行即期買入', input_html: { class: 'form-control' } %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.input :sightrate_sell, label: '銀行即期賣出', input_html: { class: 'form-control' } %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <%= f.button :submit, "儲存", class: "btn btn-primary" , data: { disable_with: "資料送出..." } %>
+    </div>
+  </div>
+<% end %>
