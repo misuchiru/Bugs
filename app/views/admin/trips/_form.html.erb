@@ -7,15 +7,15 @@
     </div>
   </div>
   <div class="row">
+    <%= render 'common/datetimepicker' %>
     <div class="col-md-6">
-      <%= render 'common/datetimepicker' %>
       <div class="form-group">
-        <%= f.input :start_day, label: '旅遊去程時間', as: :string, input_html: { class: "datepicker form-control" } %>
+        <%= f.input :start_day, label: '旅遊去程時間', as: :string, input_html: { class: "datetimepicker form-control"} %>
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <%= f.input :end_day, label: '旅遊回程時間', as: :string, input_html: { class: "datepicker form-control"} %>
+        <%= f.input :end_day, label: '旅遊回程時間', as: :string, input_html: { class: "datetimepicker form-control"} %>
       </div>
     </div>
   </div>
